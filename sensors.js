@@ -1,4 +1,9 @@
 // Detect the API before using it 
+
+var data1 = document.querySelector('#data1');
+var data2 = document.querySelector('#data2');
+var data3 = document.querySelector('#data3');
+
  
 if (navigator.geolocation) {
  
@@ -102,6 +107,10 @@ var  handleOrientationEvent = function(e) {
             beta = e.beta,
             gamma = e.gamma;
  
+ 		data1.innerHTML = alpha;
+		data2.innerHTML = beta;
+		data3.innerHTML = gamma; 		
+
         // Rotate the <img> element in 3 axes according to the device’s orientation
  
         imageElem.style.webkitTransform = 'rotateZ(' + alpha + 'deg) rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg)';
