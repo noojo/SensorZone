@@ -89,7 +89,7 @@ onOrientationChange();
 
 // Get a reference to the first <img> element on the page
  
-var imageElem = document.getElementsByTagName('img')[0],
+var imageElem = document.getElementsByTagName('img')[0];
  
 // Create an event handler function for processing the device orientation event
  
@@ -104,7 +104,7 @@ var imageElem = document.getElementsByTagName('img')[0],
  
         // Rotate the <img> element in 3 axes according to the device’s orientation
  
-        imageElem.style.webkitTransform = 'rotateZ(' + alpha + 'deg) rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg)';
+        imageElem.style.transform = 'rotateZ(' + alpha + 'deg) rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg)';
     };
  
 // Listen for changes to the device orientation using the gyroscope and fire the event 
@@ -114,7 +114,7 @@ window.addEventListener('deviceorientation', handleOrientationEvent, false);
 
 // Get a reference to the first <img> element on the page 
  
-var imageElem2 = document.getElementsByTagName('img')[1],
+var imageElem2 = document.getElementsByTagName('img')[1];
  
 // Create a function to execute when the compass heading of the device changes
  
@@ -127,7 +127,7 @@ var imageElem2 = document.getElementsByTagName('img')[1],
         // Rotate an image according to the compass heading value. The arrow pointing
         // to due north in the image will continue to point north as the device moves
  
-        imageElem2.style.webkitTransform = 'rotate(' + (-compassHeading) + 'deg)';
+        imageElem2.style.tTransform = 'rotate(' + (-compassHeading) + 'deg)';
     };
  
 // Observe the orientation of the device and call the event handler when it changes
