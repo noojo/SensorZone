@@ -19,8 +19,12 @@ if (navigator.geolocation) {
 	    successCallback = function(position) {
 		    var lat = position.coords.latitude,
 		        long = position.coords.longitude;
- 
-		    mapElem.innerHTML = '<img src="http://maps.googleapis.com/maps/api/staticmap?markers=' + lat + ',' + long + '&zoom=15&size=300x300&sensor=false&maptype=hybrid" />';
+
+		    mapElem.innerHTML = position.coords.latitude + ' ' + position.coords.longitude;   
+		    //console.log(position); 
+		    //coords: accuracy, altitude, altitudeAccuracy, heading, latitude, longitude, speed
+ 			// position.timestamp
+		    //mapElem.innerHTML = '<img src="http://maps.googleapis.com/maps/api/staticmap?markers=' + lat + ',' + long + '&zoom=15&size=300x300&sensor=false&maptype=hybrid" />';
 	    },
  
 	// Define a function to execute if the user’s location couldn’t be established
