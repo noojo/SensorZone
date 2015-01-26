@@ -93,7 +93,7 @@ var imageElem = document.getElementsByTagName('img')[0];
  
 // Create an event handler function for processing the device orientation event
  
-    handleOrientationEvent = function(e) {
+var  handleOrientationEvent = function(e) {
  
         // Get the orientation of the device in 3 axes, known as alpha, beta, and gamma, 
         // represented in degrees from the initial orientation of the device on load
@@ -118,7 +118,7 @@ var imageElem2 = document.getElementsByTagName('img')[1];
  
 // Create a function to execute when the compass heading of the device changes
  
-    handleCompassEvent = function(e) {
+var  handleCompassEvent = function(e) {
  
         // Get the current compass heading of the device, in degrees from due north
  
