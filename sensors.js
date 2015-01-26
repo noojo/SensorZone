@@ -5,6 +5,7 @@ var data2 = document.querySelector('#data2');
 var data3 = document.querySelector('#data3');
 var data4 = document.querySelector('#data4');
 
+var dials = document.querySelectorAll('img');
  
 if (navigator.geolocation) {
  
@@ -19,7 +20,7 @@ if (navigator.geolocation) {
 		    var lat = position.coords.latitude,
 		        long = position.coords.longitude;
  
-		    mapElem.innerHTML = '<img src="http://maps.googleapis.com/maps/api/staticmap?markers=' + lat + ',' + long + '&zoom=15&size=300x300&sensor=false" />';
+		    mapElem.innerHTML = '<img src="http://maps.googleapis.com/maps/api/staticmap?markers=' + lat + ',' + long + '&zoom=15&size=300x300&sensor=false&maptype=hybrid" />';
 	    },
  
 	// Define a function to execute if the user’s location couldn’t be established
@@ -114,7 +115,11 @@ var  handleOrientationEvent = function(e) {
 
         // Rotate the <img> element in 3 axes according to the device’s orientation
  
-        imageElem.style.webkitTransform = 'rotateZ(' + alpha + 'deg) rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg)';
+        //imageElem.style.webkitTransform = 'rotateZ(' + alpha + 'deg) rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg)';
+        dials[0].style.webkitTransform = 'rotate(' + alpha + 'deg)';
+        dials[1].style.webkitTransform = 'rotate(' + beta + 'deg)';
+        dials[2].style.webkitTransform = 'rotate(' + gamma + 'deg)';
+
     };
  
 // Listen for changes to the device orientation using the gyroscope and fire the event 
@@ -138,7 +143,7 @@ var handleCompassEvent = function(e) {
         // Rotate an image according to the compass heading value. The arrow pointing
         // to due north in the image will continue to point north as the device moves
  
-        imageElem2.style.webkitTransform = 'rotate(' + (-compassHeading) + 'deg)';
+        dials[3].style.webkitTransform = 'rotate(' + (-compassHeading) + 'deg)';
     };
  
 // Observe the orientation of the device and call the event handler when it changes
