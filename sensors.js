@@ -3,6 +3,7 @@
 var data1 = document.querySelector('#data1');
 var data2 = document.querySelector('#data2');
 var data3 = document.querySelector('#data3');
+var data4 = document.querySelector('#data4');
 
  
 if (navigator.geolocation) {
@@ -132,6 +133,7 @@ var handleCompassEvent = function(e) {
         // Get the current compass heading of the device, in degrees from due north
  
         var compassHeading = e.webkitCompassHeading;
+        data4.innerHTML = compassHeading;
  
         // Rotate an image according to the compass heading value. The arrow pointing
         // to due north in the image will continue to point north as the device moves
