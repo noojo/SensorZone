@@ -127,7 +127,7 @@ var  handleCompassEvent = function(e) {
         // Rotate an image according to the compass heading value. The arrow pointing
         // to due north in the image will continue to point north as the device moves
  
-        imageElem2.style.tTransform = 'rotate(' + (-compassHeading) + 'deg)';
+        imageElem2.style.transform = 'rotate(' + (-compassHeading) + 'deg)';
     };
  
 // Observe the orientation of the device and call the event handler when it changes
