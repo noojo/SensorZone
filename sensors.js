@@ -89,11 +89,11 @@ onOrientationChange();
 
 // Get a reference to the first <img> element on the page
  
-var imageElem = document.getElementsByTagName('img')[0];
+var imageElem = document.getElementsByTagName('img')[0],
  
 // Create an event handler function for processing the device orientation event
  
-var  handleOrientationEvent = function(e) {
+  handleOrientationEvent = function(e) {
  
         // Get the orientation of the device in 3 axes, known as alpha, beta, and gamma, 
         // represented in degrees from the initial orientation of the device on load
@@ -114,11 +114,11 @@ window.addEventListener('deviceorientation', handleOrientationEvent, false);
 
 // Get a reference to the first <img> element on the page 
  
-var imageElem2 = document.getElementsByTagName('img')[1];
+var imageElem2 = document.getElementsByTagName('img')[1],
  
 // Create a function to execute when the compass heading of the device changes
  
-var  handleCompassEvent = function(e) {
+ handleCompassEvent = function(e) {
  
         // Get the current compass heading of the device, in degrees from due north
  
